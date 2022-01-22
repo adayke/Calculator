@@ -19,6 +19,9 @@ function Calc(oper, a, b) {
     case 'dif':
       return a - b;
     case 'div':
+      if(b === 0) {
+        return ('Ошибка');
+      }
       return a / b;
     default:
       return 'unknown operation';
