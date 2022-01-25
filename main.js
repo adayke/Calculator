@@ -1,6 +1,6 @@
-function Calc(operation, a, b) {
+function Calc(oper, a, b) {
   switch (undefined) {
-    case operation:
+    case oper:
     case a:
     case b:
       alert('Error');
@@ -11,18 +11,17 @@ function Calc(operation, a, b) {
   return 'Error';
   };
 
-  switch (operation) {
-    case 'sum':
-      return a + b;
-    case 'mul':
-      return a * b;
-    case 'dif':
-      return a - b;
-    case 'div':
-      return a / b;
-    default:
-      return 'unknown operation';
+  const operations = {
+    sum: a + b,
+    mul: a * b,
+    dif: a - b,
+    div: a / b
   };
 
+  if(oper in operations) {
+    return operations[oper];
+  } else {
+    return 'unknown operation';
+  }
 };
 
