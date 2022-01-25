@@ -1,6 +1,6 @@
-function Calc(oper, a, b) {
+function Calc(operation, a, b) {
   switch (undefined) {
-    case oper:
+    case operation:
     case a:
     case b:
       alert('Error');
@@ -11,7 +11,7 @@ function Calc(oper, a, b) {
   return 'Error';
   };
 
-  switch (oper) {
+  switch (operation) {
     case 'sum':
       return a + b;
     case 'mul':
@@ -23,4 +23,6 @@ function Calc(oper, a, b) {
     default:
       return 'unknown operation';
   };
+
 };
+
