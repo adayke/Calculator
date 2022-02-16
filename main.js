@@ -1,57 +1,73 @@
+let arr = [];
+
+function equalResult() { 
+  let oper;
+  let operator;
+
+  let resultRow = document.getElementById('row');
+  arr = resultRow.textContent.split('');
+
+  for(let key of arr){
+    if (key === '+' || key === '-' || key === '/' || key === '×'){
+      oper = key;
+    }
+  }
+  let arrNumbers = arr.split(oper);
+  a = +(arrNumbers[0]);
+  b = +(arrNumbers[1]);
+
+  switch(oper) {
+    case '+':
+      operator = 'sum';
+      break;
+  }
+  arr = Calc(oper, a, b)
+
+  console.log(oper);
+
+ } equal.addEventListener("click", equalResult);
+
 function Calc(oper, a, b) {
   switch (undefined) {
     case oper:
     case a:
     case b:
       alert('Error');
-    break;
+      break;
   };
 
   if (typeof a !== 'number' || typeof b !== 'number') {
-  return 'Error';
+    return 'Error';
   };
 
   const operations = {
-    sum: a+b,
-    mul: a*b,
-    dif: a-b,
-    div: a/b,
+    sum: a + b,
+    mul: a * b,
+    dif: a - b,
+    div: a / b,
   };
 
-  if(oper in operations) {
+  if (oper in operations) {
     return operations[oper];
   } else {
     return 'unknown operation';
   }
 };
 
-function argumentsForCalc() {}
+function clearNumbers() { 
+  let clearRow = document.getElementById('row');
+  clearRow.innerHTML = '';
+ } clear.addEventListener("click", clearNumbers);
 
-let btnEqual = document.getElementById('equal');
-btnEqual.onclick = function () {
-  let result = document.getElementById('row');
-  result = result.textContent.split('')
-  
-}
+function eraseNumbers() { 
+  let eraseRow = document.getElementById('row');
+  eraseRow.innerHTML = eraseRow.innerHTML.slice(0, -1);
+ } erase.addEventListener("click", eraseNumbers);
 
-
-let btnClear = document.getElementById('clear');
-btnClear.onclick = function () { 
-  let clear = document.getElementById('row');
-  clear.innerHTML = '';
- };
-
-let btnErase = document.getElementById('erase');
-btnErase.onclick = function () {
-  let number = document.getElementById('row');
-  number.innerHTML = number.innerHTML.slice(0, -1);
-}
-
-let btnPlus = document.getElementById('plus');
-btnPlus.onclick = function () { 
-  let buttonPlus = document.getElementById('row')
-  buttonPlus.innerHTML = buttonPlus.innerHTML + '+';
- }
+ function btnPlus() { 
+   let buttonPlus = document.getElementById('row');
+   buttonPlus.textContent = buttonPlus.textContent + '+';
+  } plus.addEventListener("click", btnPlus)
 
 let btnMinus = document.getElementById('minus');
 btnMinus.onclick = function () {
@@ -62,7 +78,7 @@ btnMinus.onclick = function () {
 let btnMulty = document.getElementById('multiplay');
 btnMulty.onclick = function () {
   let buttonMulty = document.getElementById('row')
-  buttonMulty.innerHTML = buttonMulty.innerHTML + '*';
+  buttonMulty.innerHTML = buttonMulty.innerHTML + '×';
 }
 
 let btnDiv = document.getElementById('divide');
@@ -76,16 +92,15 @@ btnZero.onclick = function () {
   let number = document.getElementById('row');
   if (number.innerHTML.length < 6) {
     number.innerHTML = number.innerHTML + 0;
-  }
+  } 
 };
 
-let btnOne = document.getElementById('one');
-btnOne.onclick = function () { 
-  let number = document.getElementById('row');
-  if(number.innerHTML.length < 6) {
-    number.innerHTML = number.innerHTML + 1;
+function btnOne() {
+  let numbersRow = document.getElementById('row');
+  if (numbersRow.textContent.length < 6) {
+    numbersRow.textContent = numbersRow.textContent + 1;
   }
- };
+} one.addEventListener("click", btnOne);
 
 let btnTwo = document.getElementById('two');
 btnTwo.onclick = function () {
@@ -101,7 +116,7 @@ btnThree.onclick = function () {
   if (number.innerHTML.length < 6) {
     number.innerHTML = number.innerHTML + 3;
   }
-};
+}
 
 let btnFour = document.getElementById('four');
 btnFour.onclick = function () {
