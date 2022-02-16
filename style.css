@@ -1,8 +1,12 @@
+body {
+  background: #4b5efc;
+}
+
 .calculator {
   position: relative;
   width: 364px;
   height: 582px;
-  margin: 0 auto;
+  margin: 30px auto;
   background: #17171c;
 }
 
@@ -17,6 +21,8 @@
   left: 20px;
   right: 20px;
   bottom: 25px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .row__1 {
