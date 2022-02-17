@@ -1,35 +1,6 @@
-let arr = [];
-
-function equalResult() { 
-  let oper;
-  let operator;
-
-  let resultRow = document.getElementById('row');
-  arr = resultRow.textContent.split('');
-
-  for(let key of arr){
-    if (key === '+' || key === '-' || key === '/' || key === '×'){
-      oper = key;
-    }
-  }
-  let arrNumbers = arr.split(oper);
-  a = +(arrNumbers[0]);
-  b = +(arrNumbers[1]);
-
-  switch(oper) {
-    case '+':
-      operator = 'sum';
-      break;
-  }
-  arr = Calc(oper, a, b)
-
-  console.log(oper);
-
- } equal.addEventListener("click", equalResult);
-
-function Calc(oper, a, b) {
+function Calc(operator, a, b) {
   switch (undefined) {
-    case oper:
+    case operator:
     case a:
     case b:
       alert('Error');
@@ -47,13 +18,55 @@ function Calc(oper, a, b) {
     div: a / b,
   };
 
-  if (oper in operations) {
-    return operations[oper];
+  if (operator in operations) {
+    return operations[operator];
   } else {
     return 'unknown operation';
   }
 };
 
+// КНОПКА РЕЗУЛЬТАТА
+function equalBtn() {
+  let arr = row.textContent;
+  let operator;
+  let a;
+  let b;
+  let result;
+
+  for (let key of arr) {
+    if (key === "+") {
+      operator = "+"
+    }
+    else if (key === "-") {
+      operator = "-"
+    }
+    
+    else if (key === "×") {
+      operator = "×"
+    }
+    else if (key === "/") {
+      operator = "/"
+    }
+  }
+  arr = arr.split(operator)
+  a = +(arr.slice([0], [1]))
+  b = +(arr.slice([1]))
+
+  const operationsUi = {
+    "+": "sum",
+    "-": "dif",
+    "×": "mul",
+    "/": "div",
+  }
+
+  operator = operationsUi[operator]
+  result = Calc(operator, a, b)
+  row.textContent = result;  
+
+} equal.addEventListener("click", equalBtn)
+
+
+// КНОПКИ: С, BACKSPACE
 function clearNumbers() { 
   let clearRow = document.getElementById('row');
   clearRow.innerHTML = '';
@@ -64,10 +77,11 @@ function eraseNumbers() {
   eraseRow.innerHTML = eraseRow.innerHTML.slice(0, -1);
  } erase.addEventListener("click", eraseNumbers);
 
- function btnPlus() { 
-   let buttonPlus = document.getElementById('row');
-   buttonPlus.textContent = buttonPlus.textContent + '+';
-  } plus.addEventListener("click", btnPlus)
+ //КНОПКИ ОПЕРАТОРОВ 
+function btnPlus() { 
+  let buttonPlus = document.getElementById('row');
+  buttonPlus.textContent = buttonPlus.textContent + '+';
+} plus.addEventListener("click", btnPlus)
 
 let btnMinus = document.getElementById('minus');
 btnMinus.onclick = function () {
@@ -87,6 +101,7 @@ btnDiv.onclick = function () {
   buttonDiv.innerHTML = buttonDiv.innerHTML + '/';
 }
 
+// КНОПКИ ЦИФР
 let btnZero = document.getElementById('zero');
 btnZero.onclick = function () {
   let number = document.getElementById('row');
@@ -165,6 +180,3 @@ btnNine.onclick = function () {
     number.innerHTML = number.innerHTML + 9;
   }
 };
-
-
-
