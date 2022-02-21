@@ -1,3 +1,20 @@
+import { clearNumbers } from './view.js';
+import { eraseNumbers } from './view.js';
+import { btnPlus } from './view.js';
+import { btnMinus } from './view.js';
+import { btnMulty } from './view.js';
+import { btnDiv } from './view.js';
+import { btnZero } from './view.js';
+import { btnOne } from './view.js';
+import { btnTwo } from './view.js';
+import { btnThree } from './view.js';
+import { btnFour } from './view.js';
+import { btnFive } from './view.js';
+import { btnSix } from './view.js';
+import { btnSeven } from './view.js';
+import { btnEight } from './view.js';
+import { btnNine } from './view.js';
+
 function Calc(operator, a, b) {
   switch (undefined) {
     case operator:
@@ -65,118 +82,20 @@ function equalBtn() {
 
 } equal.addEventListener("click", equalBtn)
 
-
-// КНОПКИ: С, BACKSPACE
-function clearNumbers() { 
-  let clearRow = document.getElementById('row');
-  clearRow.innerHTML = '';
- } clear.addEventListener("click", clearNumbers);
-
-function eraseNumbers() { 
-  let eraseRow = document.getElementById('row');
-  eraseRow.innerHTML = eraseRow.innerHTML.slice(0, -1);
- } erase.addEventListener("click", eraseNumbers);
-
- //КНОПКИ ОПЕРАТОРОВ 
-function btnPlus() { 
-  let buttonPlus = document.getElementById('row');
-  buttonPlus.textContent = buttonPlus.textContent + '+';
-} plus.addEventListener("click", btnPlus)
-
-let btnMinus = document.getElementById('minus');
-btnMinus.onclick = function () {
-  let buttonMinus = document.getElementById('row')
-  buttonMinus.innerHTML = buttonMinus.innerHTML + '-';
-}
-
-let btnMulty = document.getElementById('multiplay');
-btnMulty.onclick = function () {
-  let buttonMulty = document.getElementById('row')
-  buttonMulty.innerHTML = buttonMulty.innerHTML + '×';
-}
-
-let btnDiv = document.getElementById('divide');
-btnDiv.onclick = function () {
-  let buttonDiv = document.getElementById('row')
-  buttonDiv.innerHTML = buttonDiv.innerHTML + '/';
-}
-
-// КНОПКИ ЦИФР
-let btnZero = document.getElementById('zero');
-btnZero.onclick = function () {
-  let number = document.getElementById('row');
-  if (number.innerHTML.length < 6) {
-    number.innerHTML = number.innerHTML + 0;
-  } 
-};
-
-function btnOne() {
-  let numbersRow = document.getElementById('row');
-  if (numbersRow.textContent.length < 6) {
-    numbersRow.textContent = numbersRow.textContent + 1;
-  }
-} one.addEventListener("click", btnOne);
-
-let btnTwo = document.getElementById('two');
-btnTwo.onclick = function () {
-  let number = document.getElementById('row');
-  if (number.innerHTML.length < 6) {
-    number.innerHTML = number.innerHTML + 2;
-  }
-};
-
-let btnThree = document.getElementById('three');
-btnThree.onclick = function () {
-  let number = document.getElementById('row');
-  if (number.innerHTML.length < 6) {
-    number.innerHTML = number.innerHTML + 3;
-  }
-}
-
-let btnFour = document.getElementById('four');
-btnFour.onclick = function () {
-  let number = document.getElementById('row');
-  if (number.innerHTML.length < 6) {
-    number.innerHTML = number.innerHTML + 4;
-  }
-};
-
-let btnFive = document.getElementById('five');
-btnFive.onclick = function () {
-  let number = document.getElementById('row');
-  if (number.innerHTML.length < 6) {
-    number.innerHTML = number.innerHTML + 5;
-  }
-};
-
-let btnSix = document.getElementById('six');
-btnSix.onclick = function () {
-  let number = document.getElementById('row');
-  if (number.innerHTML.length < 6) {
-    number.innerHTML = number.innerHTML + 6;
-  }
-};
-
-let btnSeven = document.getElementById('seven');
-btnSeven.onclick = function () {
-  let number = document.getElementById('row');
-  if (number.innerHTML.length < 6) {
-    number.innerHTML = number.innerHTML + 7;
-  }
-};
-
-let btnEight = document.getElementById('eight');
-btnEight.onclick = function () {
-  let number = document.getElementById('row');
-  if (number.innerHTML.length < 6) {
-    number.innerHTML = number.innerHTML + 8;
-  }
-};
-
-let btnNine = document.getElementById('nine');
-btnNine.onclick = function () {
-  let number = document.getElementById('row');
-  if (number.innerHTML.length < 6) {
-    number.innerHTML = number.innerHTML + 9;
-  }
-};
+// ВЫЗОВ ВСЕХ КНОПОК
+erase.addEventListener("click", eraseNumbers);
+clear.addEventListener("click", clearNumbers);
+plus.addEventListener("click", btnPlus);
+minus.addEventListener("click", btnMinus);
+multiplay.addEventListener("click", btnMulty);
+divide.addEventListener("click", btnDiv);
+zero.addEventListener("click", btnZero);
+one.addEventListener("click", btnOne);
+two.addEventListener("click", btnTwo);
+three.addEventListener("click", btnThree);
+four.addEventListener("click", btnFour);
+five.addEventListener("click", btnFive);
+six.addEventListener("click", btnSix);
+seven.addEventListener("click", btnSeven);
+eight.addEventListener("click", btnEight);
+nine.addEventListener("click", btnNine);
