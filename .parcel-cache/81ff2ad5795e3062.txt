@@ -1,0 +1,17 @@
+16
+60C:\Users\User\Desktop\frontend marathon\Calculator\style.css132895011910167889 0
+58C:\Users\User\Desktop\frontend marathon\Calculator\.vscode132894182803622480 1
+55C:\Users\User\Desktop\frontend marathon\Calculator\dist132939186986506187 1
+58C:\Users\User\Desktop\frontend marathon\Calculator\view.js132899272716503496 0
+58C:\Users\User\Desktop\frontend marathon\Calculator\main.js132899273525725862 0
+78C:\Users\User\Desktop\frontend marathon\Calculator\dist\index.6edf7916.css.map132939186986466468 0
+54C:\Users\User\Desktop\frontend marathon\Calculator\img132892951829257756 1
+64C:\Users\User\Desktop\frontend marathon\Calculator\img\erase.svg132892899960000000 0
+60C:\Users\User\Desktop\frontend marathon\Calculator\README.md132873055482826563 0
+61C:\Users\User\Desktop\frontend marathon\Calculator\index.html132939183763489820 0
+74C:\Users\User\Desktop\frontend marathon\Calculator\dist\erase.b363c819.svg132939186985999586 0
+74C:\Users\User\Desktop\frontend marathon\Calculator\dist\index.6edf7916.css132939186986009514 0
+72C:\Users\User\Desktop\frontend marathon\Calculator\.vscode\settings.json132894183049293468 0
+73C:\Users\User\Desktop\frontend marathon\Calculator\dist\index.ee1d883b.js132939186986009514 0
+77C:\Users\User\Desktop\frontend marathon\Calculator\dist\index.ee1d883b.js.map132939186986327393 0
+66C:\Users\User\Desktop\frontend marathon\Calculator\dist\index.html132939186986009514 0
