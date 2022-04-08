@@ -118,10 +118,11 @@ body {
 }
 
 .erase {
-  left: 12px;
-  right: 12px;
-  top: 12px;
-  bottom: 12px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 40px;
   color: #ffffff;
 }
 
